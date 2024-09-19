@@ -1,6 +1,27 @@
-body{
-    background-color: blueviolet;
+*{
+    padding: 0;
+    margin: 0;
 }
-h1{
-    color: white;
+
+#page-container{
+    display: grid;
+    grid-template-columns: 10vw 1fr 2fr;
+}
+
+#icon-panel{
+    width: 10vw;
+    background-color: blue;
+    height: 100vh;
+}
+
+#project-panel{
+    height: 100vh;
+    width: 30vw;
+    background-color: aquamarine;
+}
+
+#list-panel{
+    width: 60vw;
+    height: 100vh;
+    background-color: beige;
 }
