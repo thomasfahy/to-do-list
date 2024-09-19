@@ -3,6 +3,12 @@
     margin: 0;
 }
 
+@font-face {
+    font-family: 'CustomFont';
+    src: url("../src/assets/inter.ttf");
+}
+
+
 #page-container{
     display: grid;
     grid-template-columns: 10vw 1fr 2fr;
@@ -24,4 +30,27 @@
     width: 60vw;
     height: 100vh;
     background-color: beige;
+}
+
+/* Project Panel content */
+
+#new-project-button{
+    font-family: 'CustomFont', sans-serif;
+    font-weight: 500;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.4rem;
+    color: black;
+}
+
+#new-project-button p{
+    height: 5rem;
+    width: 10rem;
+    align-self: center;
+}
+
+.plus-image{
+    height: 2.5rem;
+    width: 2.5rem;
+    align-self: center;
 }
