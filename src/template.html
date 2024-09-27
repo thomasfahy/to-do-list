@@ -6,6 +6,30 @@
     <title>To do list</title>
 </head>
 <body>
+    <dialog id="new-project-dialog">
+        <div class="form-pop-up">
+            <form id="form" action="" method="dialog">
+                <h3 id="formTitle">Add new project</h3>
+                <label class="formLabel" for="title">Title</label>
+                <input class="formInput" required name="title" id="title" type="text" placeholder="ej: Harry Potter">
+            
+                <label class="formLabel" for="author">Description</label>
+                <input class="formInput" required name="author" id="author" type="text" placeholder="ej: J. K. Rowling">
+            
+                <label class="formLabel" for="pages1">Due Date</label>
+                <input class="formInput" required name="pages" id="pages1" type="number" placeholder="ej: 870">
+                
+                <label class="formLabel" for="pages2">Due Date</label>
+                <input class="formInput" required name="pages" id="pages2" type="number" placeholder="ej: 870">
+            
+                <div id="formButtonContainer">
+                    <button class="formButton" id="saveButton" name="btn_submit" value="save" id="save" type="submit">Save</button>
+                    <button class="formButton" class="closeButton" type="closeButton" name="btn_close" id="close">Close</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
+
     <div id="page-container">
         <div id="icon-panel">
             <div id="icon-container"></div>
@@ -13,7 +37,7 @@
         <div id="project-panel">
             <div id="new-project-button">
                 <p>New Project</p>
-                <img src="../src/assets/plus.svg" class="plus-image" alt="">
+                <img src="../src/assets/plus.svg" class="project-plus-image" alt="">
             </div>
             <div id="project-container"></div>
         </div>
