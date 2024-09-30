@@ -31,40 +31,31 @@ function displayProjects(){
     title.classList.add("bookTitle");
     title.textContent = `${project.title}`;
 
-    const author = document.createElement('p');
+    const description = document.createElement('p');
 
-    author.textContent = `Author: ${project.description}`;
+    author.textContent = `Description: ${project.description}`;
 
-    const pages = document.createElement('p');
-    pages.textContent = `Pages: ${project.dueDate}`;
+    const dueDate = document.createElement('p');
+    dueDate.textContent = `Due: ${project.dueDate}`;
 
-    const isRead = document.createElement('p');
-    isRead.textContent = `Read: ${book.priority}`;
+    const priority = document.createElement('p');
+    priority.textContent = `Priority: ${book.priority}`;
 
-    const bookButton = document.createElement("button");
-    bookButton.classList.add("bookButton");
-    bookButton.textContent = "Read";
+    const viewProjectButton = document.createElement("button");
+    viewProjectButton.classList.add("view-project");
+    viewProjectButton.textContent = "View";
 
-    const removeButton = document.createElement("button");
-    removeButton.classList.add("removeButton");
-    removeButton.textContent = "Delete";
 
-    bookButton.addEventListener('click', () => {
+    viewProjectButton.addEventListener('click', () => {
       myLibrary[index].toggleRead(); // Toggle the read status of the book
       displayBooks(); // Re-display the books to update the UI
     });
 
-    removeButton.addEventListener('click', () => {
-      myLibrary.splice(index, 1); // Remove book from the library
-      displayBooks(); // Re-display the updated library
-    });
-
     bookContainer.appendChild(title);
-    bookContainer.appendChild(author);
-    bookContainer.appendChild(pages);
-    bookContainer.appendChild(isRead);
-    bookContainer.appendChild(bookButton);
-    bookContainer.appendChild(removeButton);
+    bookContainer.appendChild(description);
+    bookContainer.appendChild(dueDate);
+    bookContainer.appendChild(priority);
+    bookContainer.appendChild(viewProjectButton);
 
     libraryContainer.appendChild(bookContainer);
   })
@@ -73,4 +64,4 @@ function displayProjects(){
 
 
 
-export default createNewProject();
+export { createNewProject, displayProjects };
