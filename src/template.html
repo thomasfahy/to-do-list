@@ -17,11 +17,17 @@
                 <input class="formInput" required name="author" id="author" type="text" placeholder="ej: J. K. Rowling">
             
                 <label class="formLabel" for="pages1">Due Date</label>
-                <input class="formInput" required name="pages" id="pages1" type="number" placeholder="ej: 870">
+                <input class="formInput" required name="pages" id="pages1" type="date" placeholder="ej: 870">
                 
-                <label class="formLabel" for="pages2">Due Date</label>
-                <input class="formInput" required name="pages" id="pages2" type="number" placeholder="ej: 870">
-            
+                <label class="formLabel" for="pages2">Priority</label>
+                <select class="formInput" required name="pages" id="pages2" type="number" placeholder="ej: 870">
+                    <option value="emergency">Emergency</option>
+                    <option value="high">High</option>
+                    <option value="normal">Normal</option>
+                    <option value="low">Low</option>
+                    <option value="low">On Hold</option>
+                </select>
+                
                 <div id="formButtonContainer">
                     <button class="formButton" id="saveButton" name="btn_submit" value="save" id="save" type="submit">Save</button>
                     <button class="formButton" class="closeButton" type="closeButton" name="btn_close" id="close">Close</button>
